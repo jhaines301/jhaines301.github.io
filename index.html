@@ -1,42 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hidden Pages Example</title>
-    <style>
-        body {
-            background-color: yellow;
-            color: red;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        h1 {
-            margin-top: 50px;
-        }
-        p {
-            margin-bottom: 50px;
-        }
-        .hidden-page-button {
-            background-color: red;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-    </style>
-    <script>
-        function redirectToPage(pageName) {
-            window.location.href = pageName;
-        }
-    </script>
+  <title>Website Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #ffcc00;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    .secret-button {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    <h1>Welcome to the Home Page</h1>
-    <p>This is the home page content.</p>
-
-    <button class="hidden-page-button" onclick="redirectToPage('admin.html')">Go to jhaines301.github.io/admin Page</button>
-    <button class="hidden-page-button" onclick="redirectToPage('secret.html')">Go to jhaines301.github.io/secret Page</button>
-    <button class="hidden-page-button" onclick="redirectToPage('members.html')">Go to jhaines301.github.io/members Page</button>
+  <h1>Welcome to the Website Demo!</h1>
+  <a href="/admin" class="button">Admin</a>
+  <a href="/members" class="button">Members</a>
+  <a href="/secret" class="button secret-button">Secret</a>
 </body>
 </html>
