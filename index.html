@@ -2,54 +2,41 @@
 <html>
 <head>
     <title>Hidden Pages Example</title>
-    <script>
-        function showPage(pageName) {
-            var pages = document.getElementsByClassName("page");
-            for (var i = 0; i < pages.length; i++) {
-                pages[i].style.display = "none";
-            }
-            document.getElementById(pageName).style.display = "block";
-        }
-    </script>
     <style>
-        .page {
-            display: none;
+        body {
+            background-color: yellow;
+            color: red;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 50px;
+        }
+        p {
+            margin-bottom: 50px;
+        }
+        .hidden-page-button {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
         }
     </style>
+    <script>
+        function redirectToPage(pageName) {
+            window.location.href = pageName;
+        }
+    </script>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#" onclick="showPage('home')">Home</a></li>
-            <li><a href="#" onclick="showPage('admin')">Admin</a></li>
-            <li><a href="#" onclick="showPage('secret')">Secret</a></li>
-            <li><a href="#" onclick="showPage('members')">Members</a></li>
-        </ul>
-    </nav>
+    <h1>Welcome to the Home Page</h1>
+    <p>This is the home page content.</p>
 
-    <div class="page" id="home">
-        <h1>Welcome to the Home Page</h1>
-        <p>This is the home page content.</p>
-    </div>
-
-    <div class="page" id="admin">
-        <h1>Welcome to the Admin Page</h1>
-        <p>This is the admin page content.</p>
-    </div>
-
-    <div class="page" id="secret">
-        <h1>Welcome to the Secret Page</h1>
-        <p>This is the secret page content.</p>
-    </div>
-
-    <div class="page" id="members">
-        <h1>Welcome to the Members Page</h1>
-        <p>This is the members page content.</p>
-    </div>
-
-    <script>
-        // Show the home page by default
-        showPage('home');
-    </script>
+    <button class="hidden-page-button" onclick="redirectToPage('admin.html')">Go to jhaines301.github.io/admin Page</button>
+    <button class="hidden-page-button" onclick="redirectToPage('secret.html')">Go to jhaines301.github.io/secret Page</button>
+    <button class="hidden-page-button" onclick="redirectToPage('members.html')">Go to jhaines301.github.io/members Page</button>
 </body>
 </html>
