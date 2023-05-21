@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hidden Pages Example</title>
+    <script>
+        function showPage(pageName) {
+            var pages = document.getElementsByClassName("page");
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].style.display = "none";
+            }
+            document.getElementById(pageName).style.display = "block";
+        }
+    </script>
+    <style>
+        .page {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" onclick="showPage('admin')">Admin</a></li>
+            <li><a href="#" onclick="showPage('secret')">Secret</a></li>
+            <li><a href="#" onclick="showPage('members')">Members</a></li>
+        </ul>
+    </nav>
+
+    <div class="page" id="home">
+        <h1>Welcome to the Home Page</h1>
+        <p>This is the home page content.</p>
+    </div>
+
+    <div class="page" id="admin">
+        <h1>Welcome to the Admin Page</h1>
+        <p>This is the admin page content.</p>
+    </div>
+
+    <div class="page" id="secret">
+        <h1>Welcome to the Secret Page</h1>
+        <p>This is the secret page content.</p>
+    </div>
+
+    <div class="page" id="members">
+        <h1>Welcome to the Members Page</h1>
+        <p>This is the members page content.</p>
+    </div>
+
+    <script>
+        // Show the home page by default
+        showPage('home');
+    </script>
+</body>
+</html>
