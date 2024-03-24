@@ -1,3 +1,3 @@
 # jhaines301.github.io
 
-Demo site for INST326 final project.
+used for various project hosting
