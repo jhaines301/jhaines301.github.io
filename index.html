@@ -20,7 +20,7 @@
 				<!-- Header -->
 					<header id="header">
 						<div class="logo">
-							<span class="icon solid fa-syringe"></span>
+							<span class="fa-solid fa-hospital"></span>
 						</div>
 						<div class="content">
 							<div class="inner">
@@ -33,7 +33,9 @@
 								<li><a href="#intro">Vision</a></li>
 								<li><a href="#work">Our Team</a></li>
 								<li><a href="#about">About Us</a></li>
+								<li><a href="#intro">placeholder</a></li>
 								<li><a href="#partners">Partners</a></li>
+								<li><a href="#investors">Investors</a></li>
 								<li><a href="#contact">Contact</a></li>
 							</ul>
 						</nav>
@@ -89,6 +91,41 @@
 								<p><a href="https://harmreduction.org/resource-center/harm-reduction-near-you/">National Harm Reduction</a></p></div>
 								<p><div id="paragraph">The incentive for partners to work with us is by promising them a return on investment. We promised our investors 10% back within our first 10 years. After that, we will renegotiate the terms to keep the partnership financially worthwhile for them. Outside the money aspect, partners will want to work with us because it will be good publicility for them, and they can contribute to something meaningful that benefits the community. </p></div>
 							</article>
+
+						<!-- Investor Relations -->
+						<article id="investors">
+							<h2 class="major">Investor Relations</h2>
+							<div>
+								<canvas id="myChart"></canvas>
+							  </div>
+							  
+							  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+							  
+							  <script>
+								const ctx = document.getElementById('myChart');
+							  
+								new Chart(ctx, {
+								  type: 'bar',
+								  data: {
+									labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+									datasets: [{
+									  label: '# of Votes',
+									  data: [12, 19, 3, 5, 2, 3],
+									  borderWidth: 1
+									}]
+								  },
+								  options: {
+									scales: {
+									  y: {
+										beginAtZero: true
+									  }
+									}
+								  }
+								});
+							  </script>
+							   
+					
+						</article>
 
 						<!-- Contact -->
 							<article id="contact">
